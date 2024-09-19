@@ -1,0 +1,34 @@
+# Reward Program Design Document
+
+## Overview
+This document provides a comprehensive overview of the design for the Reward Program system. It covers system architecture, data flow, and use cases.
+
+## Architecture
+![Architecture Diagram](RewardProgramArchitecture.png)
+- **Components**:
+  - **Customer Service**: Handles customer data and interactions.
+  - **Reward Service**: Manages reward calculations and updates.
+  - **Transaction Repository**: Stores and retrieves transaction records.
+  - **API Gateway**: Handles incoming requests and routes them to the appropriate service.
+
+## Data Flow
+![Data Flow Diagram](RewardProgramDataFlow.png)
+- **Transaction Recording**: Data flows from the customer transaction input to the transaction repository and reward service.
+- **Reward Calculation**: Rewards are computed based on transaction data and updated in the customer’s profile.
+
+## Use Cases
+1. **Customer Registration**
+   - **Description**: Customers register for the reward program.
+   - **Actors**: Customer
+   - **Preconditions**: Customer provides valid registration details.
+   - **Postconditions**: Customer is added to the system with a new profile.
+
+2. **Transaction Recording**
+   - **Description**: Records a transaction and updates rewards.
+   - **Actors**: System, Customer
+   - **Preconditions**: Transaction details are valid.
+   - **Postconditions**: Transaction is saved, and rewards are updated.
+
+## Assumptions
+- The system will handle multiple concurrent requests.
+- The system will scale as needed to handle increased loads.

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JUnit Test Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .summary {
+            margin-bottom: 20px;
+        }
+        .summary table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .summary th, .summary td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .summary th {
+            background-color: #f4f4f4;
+        }
+        .test-details {
+            margin-top: 20px;
+        }
+        .test-details table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .test-details th, .test-details td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .test-details th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>JUnit Test Results</h1>
+    <div class="summary">
+        <h2>Summary</h2>
+        <table>
+            <tr>
+                <th>Total Tests</th>
+                <th>Passed</th>
+                <th>Failed</th>
+                <th>Skipped</th>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>8</td>
+                <td>2</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </div>
+    <div class="test-details">
+        <h2>Test Details</h2>
+        <table>
+            <tr>
+                <th>Test Name</th>
+                <th>Status</th>
+                <th>Duration (ms)</th>
+                <th>Error Message</th>
+            </tr>
+            <tr>
+                <td>TestA</td>
+                <td>Passed</td>
+                <td>15</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>TestB</td>
+                <td>Failed</td>
+                <td>20</td>
+                <td>Expected value was 5, but got 6</td>
+            </tr>
+            <!-- Add more test details as needed -->
+        </table>
+    </div>
+</body>
+</html>

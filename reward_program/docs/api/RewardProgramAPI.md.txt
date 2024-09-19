@@ -1,0 +1,14 @@
+# Reward Program API Documentation
+
+## API Endpoints
+
+### 1. `GET /rewards`
+- **Description**: Retrieve the total reward points for a specific customer.
+- **Parameters**: 
+  - `customerId` (required): The ID of the customer.
+- **Response**:
+  - `200 OK`: Returns the total reward points for the customer.
+  - `404 Not Found`: Customer not found.
+- **Example Request**:
+  ```http
+  GET /rewards?customerId=12345

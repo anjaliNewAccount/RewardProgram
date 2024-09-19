@@ -1,0 +1,147 @@
+{
+  "info": {
+    "name": "Reward Program API",
+    "description": "Collection of API endpoints for the Reward Program.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Reward Points",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/rewards?customerId=12345",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "rewards"
+          ],
+          "query": [
+            {
+              "key": "customerId",
+              "value": "12345"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "code": 200,
+          "body": "{\n  \"customerId\": \"12345\",\n  \"name\": \"John Doe\",\n  \"totalRewards\": 250\n}",
+          "header": []
+        },
+        {
+          "code": 404,
+          "body": "{\n  \"error\": \"Customer not found\"\n}",
+          "header": []
+        }
+      ]
+    },
+    {
+      "name": "Add Customer",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/customers",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "customers"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customerId\": \"67890\",\n  \"name\": \"Jane Smith\"\n}"
+        }
+      },
+      "response": [
+        {
+          "code": 201,
+          "body": "{\n  \"message\": \"Customer successfully added\"\n}",
+          "header": []
+        },
+        {
+          "code": 400,
+          "body": "{\n  \"error\": \"Invalid input\"\n}",
+          "header": []
+        }
+      ]
+    },
+    {
+      "name": "Update Customer",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/customers/67890",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "customers",
+            "67890"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Jane Doe\"\n}"
+        }
+      },
+      "response": [
+        {
+          "code": 200,
+          "body": "{\n  \"message\": \"Customer successfully updated\"\n}",
+          "header": []
+        },
+        {
+          "code": 404,
+          "body": "{\n  \"error\": \"Customer not found\"\n}",
+          "header": []
+        }
+      ]
+    },
+    {
+      "name": "Delete Customer",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/customers/67890",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "customers",
+            "67890"
+          ]
+        }
+      },
+      "response": [
+        {
+          "code": 204,
+          "body": "",
+          "header": []
+        },
+        {
+          "code": 404,
+          "body": "{\n  \"error\": \"Customer not found\"\n}",
+          "header": []
+        }
+      ]
+    }
+  ]
+}

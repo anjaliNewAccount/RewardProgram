@@ -1,0 +1,25 @@
+# Reward Program Use Cases
+
+## Use Case 1: Customer Registration
+- **Description**: A customer registers for the reward program.
+- **Actors**: Customer
+- **Preconditions**: Customer provides valid registration information.
+- **Postconditions**: Customer is added to the system.
+
+## Use Case 2: Transaction Recording
+- **Description**: A transaction is recorded for a customer.
+- **Actors**: System, Customer
+- **Preconditions**: Transaction details are valid.
+- **Postconditions**: Transaction is recorded, and rewards are updated.
+
+## Use Case 3: Reward Points Calculation
+- **Description**: Calculate total reward points for a customer based on recorded transactions.
+- **Actors**: Reward Service
+- **Preconditions**: Transactions are recorded.
+- **Postconditions**: Reward points are updated for the customer.
+
+## Use Case 4: Retrieve Customer Details
+- **Description**: Retrieve detailed information about a customer, including their total reward points.
+- **Actors**: Customer Service
+- **Preconditions**: Customer ID is provided.
+- **Postconditions**: Customer details are retrieved and displayed.
